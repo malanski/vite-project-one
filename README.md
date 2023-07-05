@@ -1,6 +1,6 @@
 # Todo List App - Frontend
 
-![Todo List App Screenshot](screenshot.png)
+![Todo List App Screenshot](/public/screenshot.png)
 
 This is a frontend application built with TypeScript, Vite, React, and CSS to create a simple Todo List app. The app allows users to register and manage their tasks, creating TODO lists to stay organized and productive.
 
@@ -24,7 +24,7 @@ Before running the application, make sure you have the following installed:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/todo-list-app.git
+git clone https://github.com/malanski/vite-project-one.git
 cd todo-list-app
 ```
 
