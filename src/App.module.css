@@ -1,0 +1,59 @@
+
+.wrapper {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  /* display: grid; */
+  display: flex;
+  grid-template-columns: 256px 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  /* justify-content: space-between; */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* padding: 2em; */
+  margin: 0 auto;
+
+}
+
+.docs {
+  color: #888;
+}
+
+.checkBox {
+  padding: 2em 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkInput {
+  background: #202626;
+  border-radius: 10px;
+  padding: 5px;
+  min-width: 320px;
+  min-height: 50px;
+}
+.checkInput:hover {
+  background: #0c0e0e;
+
+}
+
+
