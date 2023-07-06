@@ -14,10 +14,10 @@ function App() {
   return (
     <div>
       <Header />
-      <h1>Vite + React</h1>
       <div className={styles.wrapper}>
 
         <main className={styles.card}>
+
 
           <label className={styles.checkBox}>
             <button className={styles.checkInput}>
@@ -69,13 +69,15 @@ function App() {
               </span>
             </button>
           </label>
-
     
         </main>
 
         <p className={styles.docs}>
           Click on the Vite and React logos to learn more
         </p>
+
+        <h1>Vite + React</h1>
+
       </div>
     </div>
   )
