@@ -1,0 +1,40 @@
+.InfoTasks {
+  margin-top: 50px;
+}
+
+.InfoTaskContainer {
+  padding: 2em 0px;
+  width: 350px;
+  background: #202626;
+  border-radius: 10px;
+  padding: 5px;
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.checkBox {
+  margin-right: 40x;
+  border-left: 1px solid white;
+}
+
+.checkInput {
+
+}
+
+.checkInput:hover {
+  background: #0c0e0e;
+
+}
+
+.taskDelete {
+  width: 20px;
+  border-radius: 50%;
+  background: rgb(75, 18, 18);
+}
+.taskDelete:hover {
+
+  background: rgb(156, 16, 16);
+}

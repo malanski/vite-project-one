@@ -1,8 +1,8 @@
-.tasks {
+.addTask {
   margin-top: 50px;
 }
 
-.taskContainer {
+.addTaskContainer {
   padding: 2em 0px;
   display: flex;
   justify-content: space-between;
@@ -10,11 +10,8 @@
   width: 350px;
 }
 
-.checkBox {
-  margin-right: 40x;
-  border-left: 1px solid white;
-}
-.checkInput {
+
+.AddInput {
   background: #202626;
   border-radius: 10px;
   padding: 5px;
@@ -34,8 +31,3 @@
   font-size: 22px;
   margin: 5px;
 }
-.checkInput:hover {
-  background: #0c0e0e;
-
-}
-
