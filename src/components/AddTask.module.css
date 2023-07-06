@@ -1,0 +1,41 @@
+.tasks {
+  margin-top: 50px;
+}
+
+.taskContainer {
+  padding: 2em 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+}
+
+.checkBox {
+  margin-right: 40x;
+  border-left: 1px solid white;
+}
+.checkInput {
+  background: #202626;
+  border-radius: 10px;
+  padding: 5px;
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.addbutton {
+  height: 50px;
+  width: 50px;
+  background: #11b5b5;
+  border-radius: 15px;
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 22px;
+  margin: 5px;
+}
+.checkInput:hover {
+  background: #0c0e0e;
+
+}
+

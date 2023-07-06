@@ -38,22 +38,4 @@
   color: #888;
 }
 
-.checkBox {
-  padding: 2em 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.checkInput {
-  background: #202626;
-  border-radius: 10px;
-  padding: 5px;
-  min-width: 320px;
-  min-height: 50px;
-}
-.checkInput:hover {
-  background: #0c0e0e;
-
-}
-
 
