@@ -37,6 +37,7 @@ const InfoTask = ({ tasks }: InfoTaskProps) => {
             onChange={() => handleCheckboxChange(index)}
           />
           <span
+
             style={{
               width: '300px',
               marginLeft: '20px',
