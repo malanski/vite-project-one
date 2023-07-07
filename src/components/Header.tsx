@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <header className={styles.myHeader}>
 
-      <div className={styles.flipperContainer}>
+      <div id='logo' className={styles.flipperContainer}>
         <img src={viteLogo} className={styles.logo} alt="Vite logo" ></img>
       </div>
 
