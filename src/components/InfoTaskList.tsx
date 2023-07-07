@@ -31,8 +31,17 @@ const InfoTaskList = ({ tasks, onDeleteTask }: InfoTaskListProps) => {
     <div className={styles.InfoTasks}>
 
       <div className={styles.tasksCounter}>
-        <h3>Created Tasks: {tasks.length}</h3>
-        <h3>Completed Tasks: {checkedTasks.length}</h3>
+        <h4>Created Tasks:&ensp; 
+          <span className={styles.createdNum}>
+          {tasks.length}
+        </span>
+        </h4>
+
+        <h4>Completed Tasks:&ensp;
+          <span className={styles.completedNum}>
+          {checkedTasks.length}
+        </span>
+        </h4>
       </div>
 
       {tasks.map((task, index) => (

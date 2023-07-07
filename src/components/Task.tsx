@@ -21,6 +21,7 @@ const Task: React.FC<TaskProps> = ({ task, checked, onCheckboxChange, onDelete }
         style={{
           width: '300px',
           marginLeft: '20px',
+          opacity: checked ? '0.5' : '1',
           textDecoration: checked ? 'line-through' : 'none'
         }}
       >

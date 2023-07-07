@@ -25,6 +25,7 @@ export const AddTask = () => {
       <label className={styles.addTaskContainer} htmlFor="input" title="Create a new Task">
         <input
           className={styles.AddInput}
+          placeholder="Create a new task"
           type="text"
           title='Create a new task'
           value={newTask}
@@ -32,6 +33,7 @@ export const AddTask = () => {
           onKeyDown={handleKeyDown}
 
         />
+
         <button className={styles.addbutton}
           title='Add a new task'
           onClick={handleAddTask}>

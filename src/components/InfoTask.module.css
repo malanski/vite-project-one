@@ -20,6 +20,14 @@
   justify-content: space-between;
 }
 
+.createdNum {
+  color: green;
+}
+
+.completedNum {
+  color: red;
+
+}
 input[type="checkbox"] {
   width: 20px;                         /* Set width */
   height: 20px;                        /* Set height */

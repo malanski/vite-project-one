@@ -20,6 +20,14 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  color: #cdcdcd;
+}
+
+
+input[type="text"]:active {
+  opacity: 1;
+  color: white;
+
 }
 .addbutton {
   height: 52px;

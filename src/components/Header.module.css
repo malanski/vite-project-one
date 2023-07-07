@@ -9,11 +9,31 @@
   /* font-size: 1.6rem; */
   /* padding: 1.25rem 0; */
 }
-
-.logo {
+.flipperContainer {
+  perspective: 1000px;
   width: 126px;
   height: 48px;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
+}
+
+.logo {
+  width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+  /* transition: filter 800ms; */
+  /* transform: translate3d(0, 0, 0); */
+
+}
+
+.flipperContainer:hover .logo{
+	/* transform: rotateY(180deg); */
+  /* transition: transform 1s; */
+  filter: drop-shadow(0 0 2em #646cffaa);
+  animation: logoTwist infinite 0.13s linear;
+
+	/* se quiser uma animação na vertical,
+	troque por rotateX(180deg)
+	*/
 }
 
 .logoReact {
@@ -24,13 +44,9 @@
   transition: filter 300ms;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
 .logoReact:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-  animation: logoSpin infinite 20s linear;
+  animation: logoSpin infinite 1.3s linear;
 }
 
 .typography {
@@ -38,7 +54,7 @@
   /* font-family: Inter; */
   font-family: 'Inter Tight', sans-serif;
   font-size: 40px;
-  font-style: normal;
+  /* font-style: normal; */
   font-weight: 900;
   line-height: normal;
   text-transform: lowercase;
@@ -62,6 +78,15 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes logoTwist {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(360deg);
   }
 }
 
