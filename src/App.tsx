@@ -11,13 +11,15 @@ function App() {
       <Header />
       <div className={styles.wrapper}>
 
-        <main className={styles.card}>
+          <main className={styles.card}>
+          <AddTask />
+          </main>
+          
+        </div>
 
-        <AddTask />
-
-        </main>
-
-      </div>
+      <footer>
+        <p>Developed by <a href="https://github.com/malanski/" target='blank' rel='noreferrer'>Ulisses Malanski</a> - 2023</p>
+      </footer>
     </div>
   )
 }

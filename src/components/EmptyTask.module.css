@@ -11,6 +11,7 @@
   align-items: center;
   margin: 20px 0;
   text-align: center;
+  transition: all ease-in-out 500ms;
 
 }
 .emptyTask img {
@@ -34,6 +35,7 @@ hr {
 @media (max-width: 769px) {
   .emptyTask {
     width: 340px;
+    transition: all ease-in-out 500ms;
     
   }
 }

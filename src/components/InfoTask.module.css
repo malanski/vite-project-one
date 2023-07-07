@@ -1,5 +1,6 @@
 .InfoTasks {
   margin-top: 50px;
+  min-height: 244px;
 }
 
 .InfoTaskContainer {
@@ -13,6 +14,8 @@
   justify-content: start;
   align-items: center;
   margin: 20px 0;
+  transition: all ease-in-out 500ms;
+
 }
 
 .tasksCounter {
@@ -82,6 +85,7 @@ input[type="checkbox"]:checked:hover {
 @media (max-width: 769px) {
   .InfoTaskContainer {
     width: 340px;
+    transition: all ease-in-out 500ms;
     
   }
 }
