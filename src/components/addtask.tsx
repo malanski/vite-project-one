@@ -4,7 +4,7 @@ import styles from './addTask.module.css';
 import { EmptyTask } from './EmptyTask';
 import InfoTaskList from './InfoTaskList';
 
-export const AddTask = () => {
+ const AddTask = () => {
   const [tasks, setTasks] = useState<string[]>([]);
   const [newTask, setNewTask] = useState('');
 
@@ -53,3 +53,4 @@ export const AddTask = () => {
     </div>
   );
 };
+export default AddTask;

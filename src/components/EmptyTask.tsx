@@ -1,5 +1,5 @@
 import styles from './EmptyTask.module.css';
-import clipBoard from '/public/clipboard.png';
+import clipBoard from '../assets/clipboard.png';
 
 export const EmptyTask = () => {
   return (
