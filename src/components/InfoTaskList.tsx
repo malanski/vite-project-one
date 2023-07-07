@@ -43,7 +43,7 @@ const InfoTaskList = ({ tasks, onDeleteTask }: InfoTaskListProps) => {
         </span>
         </h4>
       </div>
-
+      <hr></hr>
       {tasks.map((task, index) => (
         <Task
           key={index}

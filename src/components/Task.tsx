@@ -19,7 +19,7 @@ const Task: React.FC<TaskProps> = ({ task, checked, onCheckboxChange, onDelete }
       />
       <span
         style={{
-          width: '300px',
+          width: '100%',
           marginLeft: '20px',
           opacity: checked ? '0.5' : '1',
           textDecoration: checked ? 'line-through' : 'none'

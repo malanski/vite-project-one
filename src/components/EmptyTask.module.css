@@ -1,22 +1,33 @@
 .emptyTask {
   margin-top: 52px;
   padding: 2em 0px;
-  width: 350px;
-  background: #202626;
-  border-radius: 8px;
+  width: 736px;
+  height: 244px;
   padding: 5px;
   min-height: 50px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
   text-align: center;
 
 }
-img {
+.emptyTask img {
   width: 50px;
+  margin: 40px;
+
 }
 p {
   width: 100%;
 }
+hr {
+  width: 100%;
+}
+
+.tasksCounter {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+

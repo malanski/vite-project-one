@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 350px;
+  width: 736px;
 }
 
 
@@ -56,4 +56,10 @@ input[type="text"]:active {
   font-size: 15px;
   border-radius: 50%;
   border: 1px solid white;
+}
+@media (max-width: 769px) {
+  .addTaskContainer {
+    width: 340px;
+    
+  }
 }

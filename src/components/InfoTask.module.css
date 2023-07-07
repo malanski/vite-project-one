@@ -4,7 +4,7 @@
 
 .InfoTaskContainer {
   padding: 2em 0px;
-  width: 350px;
+  width: 736px;
   background: #262626;
   border-radius: 8px;
   padding: 5px;
@@ -21,11 +21,12 @@
 }
 
 .createdNum {
-  color: green;
+  color: gray;
 }
 
 .completedNum {
-  color: red;
+  color: green;
+
 
 }
 input[type="checkbox"] {
@@ -78,4 +79,9 @@ input[type="checkbox"]:checked:hover {
 }
 
 
-
+@media (max-width: 769px) {
+  .InfoTaskContainer {
+    width: 340px;
+    
+  }
+}

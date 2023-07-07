@@ -3,8 +3,10 @@
   background: var(--gray-700);
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 200px;
   padding-top: 50px;
+  width: 100%;
 }
 .flipperContainer {
   perspective: 1000px;
@@ -44,7 +46,7 @@
   font-family: 'Inter Tight', sans-serif;
   font-size: 40px;
   font-weight: 900;
-  line-height: normal;
+  /* line-height: normal; */
   text-transform: lowercase;
   list-style-type: none;
   display: flex;
