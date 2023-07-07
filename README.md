@@ -1,6 +1,8 @@
 # Todo List App - Frontend
 
-![Todo List App Screenshot](/public/screenshot.png)
+<!--- ![Todo List App Screenshot](/public/screenshot.png) -->
+ 
+![Todo List App Screenshot Gif](/sample.gif)
 
 This is a frontend application built with TypeScript, Vite, React, and CSS to create a simple Todo List app. The app allows users to register and manage their tasks, creating TODO lists to stay organized and productive.
 
