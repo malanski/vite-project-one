@@ -31,3 +31,9 @@ hr {
   width: 100%;
 }
 
+@media (max-width: 769px) {
+  .emptyTask {
+    width: 340px;
+    
+  }
+}
