@@ -15,13 +15,13 @@
   margin: 20px 0;
 }
 
+.tasksCounter {
+  display: flex;
+  justify-content: space-between;
+}
 .checkBox {
   margin-right: 40x;
   border-left: 1px solid white;
-}
-
-.checkInput {
-
 }
 
 .checkInput:hover {

@@ -1,42 +1,65 @@
-header {
+.myHeader {
   margin: 0;
-  background: var(--gray-800);
+  background: var(--gray-700);
   display: flex;
   justify-content: center;
-  height: 80px;
-  font-size: 1.6rem;
-  padding: 1.25rem 0;
-}
-/* 
-.header img {
-  height: 2rem;
-} */
+  height: 200px;
+  padding-top: 50px;
 
+  /* font-size: 1.6rem; */
+  /* padding: 1.25rem 0; */
+}
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  width: 126px;
+  height: 48px;
+  flex-shrink: 0;
 }
+
 .logoReact {
-  height: 6em;
-  padding: 1.5em;
+  width: 126px;
+  height: 48px;
+  flex-shrink: 0;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logoReact:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
   animation: logoSpin infinite 20s linear;
 }
 
+.typography {
+  /* color: #4EA8DE; */
+  /* font-family: Inter; */
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: lowercase;
+  list-style-type: none;
+  display: flex;
+}
+
+.blue {
+  color: #4EA8DE;
+}
+.purple {
+  color: #5E60CE;
+}
+
+
+
 @keyframes logoSpin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

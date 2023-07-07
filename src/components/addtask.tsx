@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import styles from './addTask.module.css';
-import InfoTask from './InfoTask';
-import { EmptyTask } from './emptyTask';
+// import InfoTask from './InfoTask';
+import { EmptyTask } from './EmptyTask';
+import InfoTaskList from './InfoTaskList';
 
 export const AddTask = () => {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -21,8 +22,6 @@ export const AddTask = () => {
   };
   return (
     <div className={styles.addTask}>
-      <h1>Todo</h1>
-      <h2>Tasks</h2>
       <label className={styles.addTaskContainer} htmlFor="input" title="Create a new Task">
         <input
           className={styles.AddInput}
@@ -33,21 +32,21 @@ export const AddTask = () => {
           onKeyDown={handleKeyDown}
 
         />
-        <button className={styles.addbutton} 
+        <button className={styles.addbutton}
           title='Add a new task'
           onClick={handleAddTask}>
-          +
+          Add
+          <div className={styles.addIcon}>+</div>
         </button>
       </label>
 
-      {/*
-       Create a conditional:
-        if tasks is empty so it shows the EmptyTask element
-        if tasks exists show InfoTask element.
-       */}
-            {tasks.length === 0 ? <EmptyTask /> : <InfoTask tasks={tasks} />}
-
-      
+      {tasks.length === 0 ? <EmptyTask /> : 
+        <InfoTaskList tasks={tasks} onDeleteTask={(index) => {
+          const updatedTasks = [...tasks];
+          updatedTasks.splice(index, 1);
+          setTasks(updatedTasks);
+        }}
+      />}
 
     </div>
   );
