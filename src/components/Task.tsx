@@ -12,7 +12,6 @@ const Task: React.FC<TaskProps> = ({ task, checked, onCheckboxChange, onDelete }
   return (
     <label className={styles.InfoTaskContainer}>
       <input
-        className={styles.checkBox}
         type="checkbox"
         title="Check mark this task"
         checked={checked}

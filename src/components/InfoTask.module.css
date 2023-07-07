@@ -5,10 +5,10 @@
 .InfoTaskContainer {
   padding: 2em 0px;
   width: 350px;
-  background: #202626;
-  border-radius: 10px;
+  background: #262626;
+  border-radius: 8px;
   padding: 5px;
-  min-height: 50px;
+  min-height: 52px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -19,9 +19,38 @@
   display: flex;
   justify-content: space-between;
 }
-.checkBox {
-  margin-right: 40x;
-  border-left: 1px solid white;
+
+input[type="checkbox"] {
+  width: 20px;                         /* Set width */
+  height: 20px;                        /* Set height */
+  clip-path: circle(50% at 50% 50%);   /* Set the clip path of circle*/
+  opacity: 0.8;
+  border: 1px solid;
+  transition: all ease-in-out 300ms;
+  background: #0d0d0d;
+  border-color: #2f5f7c;
+}
+
+input[type="checkbox"]:hover {
+  background-color: #10212a;
+  border-color: #1d6b9a;
+}
+
+input[type="checkbox"]:checked {
+  opacity: 0.8;
+  transition: all ease-in-out 400ms;
+  accent-color: #5658bb;
+  background: #5658bb;
+  border-color: #5658bb;
+  border: 1px solid;
+}
+
+input[type="checkbox"]:checked:hover {
+  background-color: #7678E2;
+  accent-color: #7678E2;
+
+  border-color: #7678E2;
+  opacity: 1;
 }
 
 .checkInput:hover {
@@ -31,10 +60,14 @@
 
 .taskDelete {
   width: 20px;
-  border-radius: 50%;
-  background: rgb(75, 18, 18);
+  border-radius: 4px;
+  background: none;
+  border: none;
 }
 .taskDelete:hover {
 
-  background: rgb(156, 16, 16);
+  background: #333333;
 }
+
+
+
