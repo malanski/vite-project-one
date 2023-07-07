@@ -1,7 +1,7 @@
 import styles from './App.module.css';
 import './global.css';
 import { Header } from './components/Header';
-import { AddTask } from './components/addTask';
+import { AddTask } from './components/AddTask';
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
         </div>
 
       <footer>
-        <p>Developed by <a href="https://github.com/malanski/" target='blank' rel='noreferrer'>Ulisses Malanski</a> - 2023</p>
+        <p>Developed by <a href="https://malanski.github.io/portfolio/" target='blank' rel='noreferrer'>Ulisses Malanski</a> - 2023</p>
       </footer>
     </div>
   )
