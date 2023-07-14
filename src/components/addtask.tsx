@@ -1,12 +1,38 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './addTask.module.css';
-// import InfoTask from './InfoTask';
 import { EmptyTask } from './EmptyTask';
 import InfoTaskList from './InfoTaskList';
 
- const AddTask = () => {
+const AddTask = () => {
   const [tasks, setTasks] = useState<string[]>([]);
   const [newTask, setNewTask] = useState('');
+
+  useEffect(() => {
+    const retrieveTasks = () => {
+      try {
+        const storedTasks = localStorage.getItem('tasks');
+        if (storedTasks) {
+          setTasks(JSON.parse(storedTasks));
+        }
+      } catch (error) {
+        console.log('Error retrieving tasks from local storage:', error);
+      }
+    };
+
+    retrieveTasks();
+  }, []);
+
+  useEffect(() => {
+    const saveTasks = () => {
+      try {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+      } catch (error) {
+        console.log('Error saving tasks to local storage:', error);
+      }
+    };
+
+    saveTasks();
+  }, [tasks]);
 
   const handleAddTask = () => {
     if (newTask.trim() === '') return;
@@ -20,6 +46,11 @@ import InfoTaskList from './InfoTaskList';
       handleAddTask();
     }
   };
+
+  useEffect(() => {
+    console.log(tasks); // Log tasks data to console on every refresh
+  }, [tasks]);
+
   return (
     <div className={styles.addTask}>
       <label className={styles.addTaskContainer} htmlFor="input" title="Create a new Task">
@@ -31,7 +62,6 @@ import InfoTaskList from './InfoTaskList';
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
           onKeyDown={handleKeyDown}
-
         />
 
         <button className={styles.addbutton}
@@ -42,15 +72,25 @@ import InfoTaskList from './InfoTaskList';
         </button>
       </label>
 
-      {tasks.length === 0 ? <EmptyTask /> : 
-        <InfoTaskList tasks={tasks} onDeleteTask={(index) => {
-          const updatedTasks = [...tasks];
-          updatedTasks.splice(index, 1);
-          setTasks(updatedTasks);
-        }}
-      />}
-
+      {tasks.length === 0 ? (
+        <EmptyTask />
+      ) : (
+        <InfoTaskList
+          tasks={tasks}
+          onDeleteTask={(index) => {
+            const updatedTasks = [...tasks];
+            updatedTasks.splice(index, 1);
+            setTasks(updatedTasks);
+          }}
+          onCheckboxChange={(index) => {
+            const updatedTasks = [...tasks];
+            updatedTasks[index] = newTask; // Update the specific task
+            setTasks(updatedTasks);
+          }}
+        />
+      )}
     </div>
   );
 };
+
 export default AddTask;
