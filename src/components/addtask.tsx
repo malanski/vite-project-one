@@ -1,43 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import styles from './addTask.module.css';
-import { EmptyTask } from './EmptyTask';
-import InfoTaskList from './InfoTaskList';
+import { AppContext } from '../context/AppContext';
 
 const AddTask = () => {
-  const [tasks, setTasks] = useState<string[]>([]);
+  const context = useContext(AppContext);
   const [newTask, setNewTask] = useState('');
-
-  useEffect(() => {
-    const retrieveTasks = () => {
-      try {
-        const storedTasks = localStorage.getItem('tasks');
-        if (storedTasks) {
-          setTasks(JSON.parse(storedTasks));
-        }
-      } catch (error) {
-        console.log('Error retrieving tasks from local storage:', error);
-      }
-    };
-
-    retrieveTasks();
-  }, []);
-
-  useEffect(() => {
-    const saveTasks = () => {
-      try {
-        localStorage.setItem('tasks', JSON.stringify(tasks));
-      } catch (error) {
-        console.log('Error saving tasks to local storage:', error);
-      }
-    };
-
-    saveTasks();
-  }, [tasks]);
 
   const handleAddTask = () => {
     if (newTask.trim() === '') return;
 
-    setTasks((prevTasks) => [...prevTasks, newTask]);
+    const updatedTasks = [...context.tasks, newTask];
+    context.setTasks(updatedTasks);
     setNewTask('');
   };
 
@@ -48,8 +21,8 @@ const AddTask = () => {
   };
 
   useEffect(() => {
-    console.log(tasks); // Log tasks data to console on every refresh
-  }, [tasks]);
+    localStorage.setItem('tasks', JSON.stringify(context.tasks));
+  }, [context.tasks]);
 
   return (
     <div className={styles.addTask}>
@@ -71,24 +44,6 @@ const AddTask = () => {
           <div className={styles.addIcon}>+</div>
         </button>
       </label>
-
-      {tasks.length === 0 ? (
-        <EmptyTask />
-      ) : (
-        <InfoTaskList
-          tasks={tasks}
-          onDeleteTask={(index) => {
-            const updatedTasks = [...tasks];
-            updatedTasks.splice(index, 1);
-            setTasks(updatedTasks);
-          }}
-          onCheckboxChange={(index) => {
-            const updatedTasks = [...tasks];
-            updatedTasks[index] = newTask; // Update the specific task
-            setTasks(updatedTasks);
-          }}
-        />
-      )}
     </div>
   );
 };

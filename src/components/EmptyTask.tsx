@@ -5,7 +5,7 @@ export const EmptyTask = () => {
   return (
     <div className={styles.emptyTask}>
 
-      <div className={styles.tasksCounter}>
+      {/* <div className={styles.tasksCounter}>
         <h4>Created Tasks:&ensp; 
           <span className={styles.createdNum}>
           0
@@ -17,8 +17,7 @@ export const EmptyTask = () => {
           0
         </span>
         </h4>
-      </div>
-      <hr></hr>
+      </div> */}
       <img src={clipBoard} alt='Clipboard icon'></img>
         <p>
           You have no tasks registered yet<br></br>
