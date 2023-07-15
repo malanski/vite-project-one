@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import styles from './InfoTask.module.css';
 import { AppContext } from '../context/AppContext';
-import { TaskItem } from './TaskItem';
 
 const InfoTaskList = () => {
   const context = useContext(AppContext);

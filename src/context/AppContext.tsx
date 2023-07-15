@@ -50,7 +50,7 @@ export const AppContextProvider = ({ children }: Props) => {
   };
 
   const deleteTask = (index: number) => {
-    const updatedTasks = tasks.filter((task, i) => i !== index);
+    const updatedTasks = tasks.filter((_task, i) => i !== index);
     setTasks(updatedTasks);
 
     const updatedCompletedTaskIndices = completedTaskIndices.filter((i) => i !== index);
