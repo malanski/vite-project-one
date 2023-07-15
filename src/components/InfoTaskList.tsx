@@ -23,10 +23,6 @@ const InfoTaskList = () => {
 
       <hr />
 
-      {/* Render the list of tasks */}
-      {context.tasks.map((task, index) => (
-        <TaskItem key={index} task={task} index={index} checked/>
-      ))}
     </div>
   );
 };

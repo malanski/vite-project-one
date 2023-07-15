@@ -10,7 +10,7 @@ import { AppContext } from '../context/AppContext';
 export const Home = () => {
   const context = useContext(AppContext)
   const haveTask = context.tasks.length > 0
-  
+
   return (
     <main>
       <AddTask />
@@ -18,12 +18,12 @@ export const Home = () => {
 
       {
         haveTask
-          ? 
-          context.tasks.map(task => (
-          <TaskItem task={task} key={task} checked={false} index={-1} /> 
-        ))
-          : 
-        <EmptyTask />
+          ?
+          context.tasks.map((task, index) => (
+            <TaskItem key={index} task={task} index={index} checked />
+          ))
+          :
+          <EmptyTask />
       }
 
     </main>
